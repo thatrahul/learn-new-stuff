@@ -25,10 +25,15 @@
 
 // API definition
 - (void) setItemName : (NSString *) name;
+
 - (NSString*) itemName;
+
 - (void) setSerialNumber : (NSString *) sno;
+
 - (NSString*) serialNumber;
+
 - (void) setCostInDollars : (int) cost;
+
 - (int) costInDollars;
 
 - (NSDate *) dateCreated;

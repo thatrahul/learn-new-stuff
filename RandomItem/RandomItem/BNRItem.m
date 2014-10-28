@@ -68,4 +68,10 @@
                              
 }
 
++ (BNRItem *) randomItem {
+
+   BNRItem *item = [[BNRItem alloc] initWithItemName:@"RandomItem"];
+    return item;
+}
+
 @end
