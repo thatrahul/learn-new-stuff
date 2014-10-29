@@ -10,4 +10,32 @@
 
 @implementation BNRContainer
 
+-(instancetype) initWithCapacity: (int) capacity {
+    return [self initWithCapacityAndName:capacity name:@"Container"];
+}
+
+-(instancetype) initWithCapacityAndName: (int)capacity name: (NSString*) name {
+    self = [super initWithItemName:name];
+    if (self) {
+        subItems = [[NSMutableArray alloc] initWithCapacity:capacity];
+    }
+    return self;
+}
+
+-(void) addItem: (BNRItem*) item {
+    [subItems addObject:item ];
+}
+
+- (int) costInDollars {
+    int totalCost = 0;
+    for (BNRItem *item in subItems) {
+        totalCost = totalCost + item.costInDollars;
+    }
+    return totalCost;
+}
+
+- (void)dealloc {
+    NSLog(@"deallocating now");
+}
+
 @end

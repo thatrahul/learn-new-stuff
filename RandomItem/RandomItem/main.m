@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -41,7 +42,7 @@ int main(int argc, const char * argv[]) {
         
         {
             
-            BNRItem *item1 = [[BNRItem alloc] initWithItemName:@"Computer" costInDollars:1500 serialNumner:@"Test123"];
+            BNRItem *item1 = [[BNRItem alloc] initWithItemName:@"Computer" costInDollars:1500 serialNumber:@"Test123"];
             NSLog(@"item1 : %@", item1);
             
             
@@ -50,6 +51,35 @@ int main(int argc, const char * argv[]) {
             
             
         }
+        
+        NSLog(@"Random stuff");
+        
+        int size = 10000;
+        NSMutableArray *bnrItems = [[NSMutableArray alloc] initWithCapacity:size];
+        
+        for (int i=0; i<size; i++) {
+            
+            BNRItem *randomItem = [BNRItem randomItem];
+            [bnrItems addObject:randomItem];
+            
+        }
+        for (BNRItem *item in bnrItems) {
+            NSLog(@"%@", item);
+        }
+
+        NSLog(@"BNRContainer stuff");
+        
+        BNRContainer *container = [[BNRContainer alloc] initWithCapacity:size];
+        
+        for (BNRItem *item in bnrItems) {
+            [container addItem:item];
+        }
+        
+        int total = container.costInDollars;
+        
+        NSLog(@"Total cost:%d and name %@", total, container.itemName);
+        
+        container = nil;
         
     }
     return 0;

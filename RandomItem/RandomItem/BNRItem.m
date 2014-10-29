@@ -12,7 +12,7 @@
 // initializers
 -(instancetype) initWithItemName: (NSString*) name
                    costInDollars:(int) value
-                    serialNumner: (NSString*) sno {
+                    serialNumber: (NSString*) sno {
     self =[super init];
     if (self) {
         //assign the values to instance variables
@@ -25,7 +25,12 @@
 }
 
 -(instancetype) initWithItemName: (NSString*) name {
-    return [self initWithItemName:name costInDollars:0 serialNumner:@""];
+    return [self initWithItemName:name costInDollars:0 serialNumber:@""];
+}
+
+-(instancetype) initWithItemName: (NSString*) name
+                    serialNumber: (NSString*) sno {
+    return [self initWithItemName:name costInDollars:-1 serialNumber:sno];
 }
 
 -(instancetype) init {
@@ -69,8 +74,21 @@
 }
 
 + (BNRItem *) randomItem {
+    
+    NSArray *adjectiveList = @[@"Fluffy", @"Bright", @"Shiny"];
+    NSArray *nounList = @[@"Bear", @"Spork", @"Mac", @"Dell",@"Windows"];
+    int randomInt = arc4random();
+    int adjectiveIndex = randomInt % [adjectiveList count];
+    int nounIndex = randomInt % [nounList count];
+    
+    NSString *name = [NSString stringWithFormat:@"%@ %@", [adjectiveList objectAtIndex:adjectiveIndex],
+    [nounList objectAtIndex:nounIndex]];
+    
+    NSString *serialNumber = [NSString stringWithFormat:@"%c%c%c%c" ,'0' + arc4random()%10, 'A' + arc4random()%26,'0' + arc4random()%10, 'A' + arc4random()%26];
+    
+    int value = arc4random() % 100;
 
-   BNRItem *item = [[BNRItem alloc] initWithItemName:@"RandomItem"];
+    BNRItem *item = [[BNRItem alloc] initWithItemName:name costInDollars:value serialNumber:serialNumber];
     return item;
 }
 

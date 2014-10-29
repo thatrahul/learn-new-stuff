@@ -21,7 +21,10 @@
 -(instancetype) initWithItemName: (NSString*) name;
 -(instancetype) initWithItemName: (NSString*) name
                    costInDollars:(int) value
-                    serialNumner: (NSString*) sno;
+                    serialNumber: (NSString*) sno;
+
+-(instancetype) initWithItemName: (NSString*) name
+                    serialNumber: (NSString*) sno;
 
 // API definition
 - (void) setItemName : (NSString *) name;

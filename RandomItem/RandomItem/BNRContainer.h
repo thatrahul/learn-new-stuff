@@ -9,5 +9,15 @@
 #import "BNRItem.h"
 
 @interface BNRContainer : BNRItem
+{
+    int initialCapacity;
+    NSMutableArray *subItems;
+}
+
+-(instancetype) initWithCapacity: (int)capacity;
+-(instancetype) initWithCapacityAndName: (int)capacity name: (NSString*) name;
+
+-(void) addItem: (BNRItem*) item;
+
 
 @end
