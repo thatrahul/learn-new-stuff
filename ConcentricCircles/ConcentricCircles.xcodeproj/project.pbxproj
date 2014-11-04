@@ -14,6 +14,7 @@
 		544D76971A0208DB006D5E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544D76961A0208DB006D5E74 /* Images.xcassets */; };
 		544D769A1A0208DB006D5E74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544D76981A0208DB006D5E74 /* LaunchScreen.xib */; };
 		544D76A61A0208DB006D5E74 /* ConcentricCirclesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76A51A0208DB006D5E74 /* ConcentricCirclesTests.m */; };
+		544D76B11A0209D4006D5E74 /* BNRConcentricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76B01A0209D4006D5E74 /* BNRConcentricView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		544D769F1A0208DB006D5E74 /* ConcentricCirclesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentricCirclesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		544D76A41A0208DB006D5E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		544D76A51A0208DB006D5E74 /* ConcentricCirclesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcentricCirclesTests.m; sourceTree = "<group>"; };
+		544D76AF1A0209D4006D5E74 /* BNRConcentricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRConcentricView.h; path = ../BNRConcentricView.h; sourceTree = "<group>"; };
+		544D76B01A0209D4006D5E74 /* BNRConcentricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRConcentricView.m; path = ../BNRConcentricView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				544D768D1A0208DB006D5E74 /* AppDelegate.h */,
 				544D768E1A0208DB006D5E74 /* AppDelegate.m */,
+				544D76AF1A0209D4006D5E74 /* BNRConcentricView.h */,
+				544D76B01A0209D4006D5E74 /* BNRConcentricView.m */,
 				544D76901A0208DB006D5E74 /* ViewController.h */,
 				544D76911A0208DB006D5E74 /* ViewController.m */,
 				544D76931A0208DB006D5E74 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 				544D76921A0208DB006D5E74 /* ViewController.m in Sources */,
 				544D768F1A0208DB006D5E74 /* AppDelegate.m in Sources */,
 				544D768C1A0208DB006D5E74 /* main.m in Sources */,
+				544D76B11A0209D4006D5E74 /* BNRConcentricView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

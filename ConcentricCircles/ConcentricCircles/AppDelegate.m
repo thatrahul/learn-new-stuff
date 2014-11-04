@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BNRConcentricView.h"
+
 
 @interface AppDelegate ()
 
@@ -16,6 +18,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    int originx = 20;
+//    int originy = 100;
+//    int width = 100;
+//    int height = 150;
+//    int offset = 10;
+    
+    
+//    CGRect firstFrame = CGRectMake(originx,originy,width,height);
+    CGRect firstFrame = self.window.bounds;
+    
+   // CGRect secondFrame = CGRectMake(originx + offset,originy + offset,width,height);
+    
+    BNRConcentricView *cview = [[BNRConcentricView alloc] initWithFrame:firstFrame];
+    //cview.backgroundColor = [UIColor redColor];
+    cview.backgroundColor = [UIColor clearColor];
+    
+   
+    [self.window addSubview:cview];
+    //[cview addSubview:cview2];
+    
+    //self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
