@@ -20,27 +20,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    int originx = 20;
-//    int originy = 100;
-//    int width = 100;
-//    int height = 150;
-//    int offset = 10;
     
-    
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width = bigRect.size.width * 2.0;
+    bigRect.size.height = bigRect.size.height * 2.0;
 //    CGRect firstFrame = CGRectMake(originx,originy,width,height);
-    CGRect firstFrame = self.window.bounds;
+//    CGRect firstFrame = self.window.bounds;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.window addSubview: scrollView];
     
-   // CGRect secondFrame = CGRectMake(originx + offset,originy + offset,width,height);
-    
-    BNRConcentricView *cview = [[BNRConcentricView alloc] initWithFrame:firstFrame];
-    //cview.backgroundColor = [UIColor redColor];
+    BNRConcentricView *cview = [[BNRConcentricView alloc] initWithFrame:bigRect];
     cview.backgroundColor = [UIColor clearColor];
-    
-   
-    [self.window addSubview:cview];
+    //add to scroll view as subview
+    [scrollView addSubview: cview];
+    scrollView.contentSize = bigRect.size;
+
     //[cview addSubview:cview2];
     
-    //self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.

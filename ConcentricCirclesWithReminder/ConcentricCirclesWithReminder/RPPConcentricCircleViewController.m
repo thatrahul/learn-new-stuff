@@ -7,7 +7,15 @@
 //
 
 #import "RPPConcentricCircleViewController.h"
+# import "BNRConcentricView.h"
 
 @implementation RPPConcentricCircleViewController
+-(void) loadView
+{
+    //create a view
+    CGRect frame = [UIScreen mainScreen].bounds;
+    BNRConcentricView *concentricView =[[BNRConcentricView alloc] initWithFrame:frame];
+    self.view = concentricView;
+}
 
 @end

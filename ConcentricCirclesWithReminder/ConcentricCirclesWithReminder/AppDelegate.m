@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RPPConcentricCircleViewController.h"
+#import "RPPReminderViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    RPPConcentricCircleViewController *rvc = [[RPPConcentricCircleViewController alloc] init];
+    
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    RPPReminderViewController *reminVC = [[RPPReminderViewController alloc] initWithNibName:@"RPPReminderViewController" bundle:appBundle];
+    
+    self.window.rootViewController = reminVC;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }

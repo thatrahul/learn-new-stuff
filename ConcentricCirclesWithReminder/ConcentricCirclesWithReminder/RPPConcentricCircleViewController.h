@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface RPPConcentricCircleViewController : NSObject
-
+@interface RPPConcentricCircleViewController : UIViewController
 @end

@@ -7,7 +7,18 @@
 //
 
 #import "RPPReminderViewController.h"
+#import <UIKit/UIKit.h>
+
+@interface RPPReminderViewController()
+
+@property (nonatomic, weak) IBOutlet UIDatePicker *datePicker;
+
+@end
 
 @implementation RPPReminderViewController
-
+-(IBAction) addReminder:(id)sender
+{
+    NSDate *date = self.datePicker.date;
+    NSLog(@"Setting a reminder for %@", date);
+}
 @end

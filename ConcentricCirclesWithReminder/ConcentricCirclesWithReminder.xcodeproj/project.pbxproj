@@ -14,6 +14,10 @@
 		544D76CC1A099AD3006D5E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544D76CB1A099AD3006D5E74 /* Images.xcassets */; };
 		544D76CF1A099AD3006D5E74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544D76CD1A099AD3006D5E74 /* LaunchScreen.xib */; };
 		544D76DB1A099AD3006D5E74 /* ConcentricCirclesWithReminderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76DA1A099AD3006D5E74 /* ConcentricCirclesWithReminderTests.m */; };
+		544D76E61A099B73006D5E74 /* BNRConcentricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76E41A099B73006D5E74 /* BNRConcentricView.m */; };
+		544D76E91A099BE3006D5E74 /* RPPConcentricCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76E81A099BE3006D5E74 /* RPPConcentricCircleViewController.m */; };
+		544D76EC1A09A424006D5E74 /* RPPReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D76EB1A09A424006D5E74 /* RPPReminderViewController.m */; };
+		544D76EE1A09A5A9006D5E74 /* RPPReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544D76ED1A09A5A9006D5E74 /* RPPReminderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		544D76D41A099AD3006D5E74 /* ConcentricCirclesWithReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentricCirclesWithReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		544D76D91A099AD3006D5E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		544D76DA1A099AD3006D5E74 /* ConcentricCirclesWithReminderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcentricCirclesWithReminderTests.m; sourceTree = "<group>"; };
+		544D76E41A099B73006D5E74 /* BNRConcentricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRConcentricView.m; sourceTree = "<group>"; };
+		544D76E51A099B73006D5E74 /* BNRConcentricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRConcentricView.h; sourceTree = "<group>"; };
+		544D76E71A099BE3006D5E74 /* RPPConcentricCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPConcentricCircleViewController.h; sourceTree = "<group>"; };
+		544D76E81A099BE3006D5E74 /* RPPConcentricCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPConcentricCircleViewController.m; sourceTree = "<group>"; };
+		544D76EA1A09A424006D5E74 /* RPPReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPReminderViewController.h; sourceTree = "<group>"; };
+		544D76EB1A09A424006D5E74 /* RPPReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPReminderViewController.m; sourceTree = "<group>"; };
+		544D76ED1A09A5A9006D5E74 /* RPPReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPPReminderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +92,21 @@
 		544D76BD1A099AD3006D5E74 /* ConcentricCirclesWithReminder */ = {
 			isa = PBXGroup;
 			children = (
+				544D76E41A099B73006D5E74 /* BNRConcentricView.m */,
+				544D76E51A099B73006D5E74 /* BNRConcentricView.h */,
 				544D76C21A099AD3006D5E74 /* AppDelegate.h */,
 				544D76C31A099AD3006D5E74 /* AppDelegate.m */,
+				544D76EA1A09A424006D5E74 /* RPPReminderViewController.h */,
+				544D76EB1A09A424006D5E74 /* RPPReminderViewController.m */,
+				544D76ED1A09A5A9006D5E74 /* RPPReminderViewController.xib */,
 				544D76C51A099AD3006D5E74 /* ViewController.h */,
 				544D76C61A099AD3006D5E74 /* ViewController.m */,
 				544D76C81A099AD3006D5E74 /* Main.storyboard */,
 				544D76CB1A099AD3006D5E74 /* Images.xcassets */,
 				544D76CD1A099AD3006D5E74 /* LaunchScreen.xib */,
 				544D76BE1A099AD3006D5E74 /* Supporting Files */,
+				544D76E71A099BE3006D5E74 /* RPPConcentricCircleViewController.h */,
+				544D76E81A099BE3006D5E74 /* RPPConcentricCircleViewController.m */,
 			);
 			path = ConcentricCirclesWithReminder;
 			sourceTree = "<group>";
@@ -163,6 +181,7 @@
 		544D76B31A099AD3006D5E74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RPP;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Rahul Phadnis";
 				TargetAttributes = {
@@ -200,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				544D76CA1A099AD3006D5E74 /* Main.storyboard in Resources */,
+				544D76EE1A09A5A9006D5E74 /* RPPReminderViewController.xib in Resources */,
 				544D76CF1A099AD3006D5E74 /* LaunchScreen.xib in Resources */,
 				544D76CC1A099AD3006D5E74 /* Images.xcassets in Resources */,
 			);
@@ -220,8 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				544D76C71A099AD3006D5E74 /* ViewController.m in Sources */,
+				544D76EC1A09A424006D5E74 /* RPPReminderViewController.m in Sources */,
 				544D76C41A099AD3006D5E74 /* AppDelegate.m in Sources */,
 				544D76C11A099AD3006D5E74 /* main.m in Sources */,
+				544D76E61A099B73006D5E74 /* BNRConcentricView.m in Sources */,
+				544D76E91A099BE3006D5E74 /* RPPConcentricCircleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
