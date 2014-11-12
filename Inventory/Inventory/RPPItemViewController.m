@@ -17,7 +17,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if (self) {
-        for(int i=0 ; i<10; i++) {
+        for(int i=0 ; i < 5; i++) {
             [[RPPItemStore sharedStore] createItem];
         }
         
@@ -26,14 +26,14 @@
     return self;
 }
 
--(instancetype)initWithStyle:(UITableViewStyle)style {
+-(instancetype) initWithStyle: (UITableViewStyle) style {
     return [self init];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
     NSInteger count = [[[RPPItemStore sharedStore] allItems] count];
-    return count;
+    return count+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -42,10 +42,14 @@
     // UITableViewCell *row = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UTTableViewCell"];
     
     UITableViewCell *row = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-   // NSArray *items = [[RPPItemStore sharedStore] allItems];
-    
-    BNRItem *item = [[RPPItemStore sharedStore] itemAtIndex: (int) indexPath.row ];
-    row.textLabel.text = [item description];
+    int index = (int) indexPath.row;
+    NSInteger itemCount = [[[RPPItemStore sharedStore] allItems] count];
+    if (index > itemCount-1) {
+        row.textLabel.text = @"No more items";
+    } else {
+        BNRItem *item = [[RPPItemStore sharedStore] itemAtIndex: (int) indexPath.row ];
+        row.textLabel.text = [item description];
+    }
     return row;
 }
 
