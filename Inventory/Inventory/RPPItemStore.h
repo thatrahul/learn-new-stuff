@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+@class BNRItem;
 
 @interface RPPItemStore : NSObject
+
+@property (nonatomic,readonly,copy, getter=allItems) NSArray *allItems;
+
++ (instancetype) sharedStore;
+- (BNRItem *) createItem;
+
+- (BNRItem *) itemAtIndex: (int) index;
+
 
 @end

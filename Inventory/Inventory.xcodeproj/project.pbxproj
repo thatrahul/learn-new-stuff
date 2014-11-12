@@ -14,6 +14,9 @@
 		544D77101A0B4DBB006D5E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544D770F1A0B4DBB006D5E74 /* Images.xcassets */; };
 		544D77131A0B4DBB006D5E74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544D77111A0B4DBB006D5E74 /* LaunchScreen.xib */; };
 		544D771F1A0B4DBB006D5E74 /* InventoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D771E1A0B4DBB006D5E74 /* InventoryTests.m */; };
+		544D772A1A0B4E99006D5E74 /* RPPItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D77291A0B4E99006D5E74 /* RPPItemViewController.m */; };
+		544D772D1A0B5434006D5E74 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D772C1A0B5434006D5E74 /* BNRItem.m */; };
+		544D77301A0B5513006D5E74 /* RPPItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D772F1A0B5513006D5E74 /* RPPItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		544D77181A0B4DBB006D5E74 /* InventoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		544D771D1A0B4DBB006D5E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		544D771E1A0B4DBB006D5E74 /* InventoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryTests.m; sourceTree = "<group>"; };
+		544D77281A0B4E99006D5E74 /* RPPItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPItemViewController.h; sourceTree = "<group>"; };
+		544D77291A0B4E99006D5E74 /* RPPItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPItemViewController.m; sourceTree = "<group>"; };
+		544D772B1A0B5434006D5E74 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		544D772C1A0B5434006D5E74 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		544D772E1A0B5513006D5E74 /* RPPItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPItemStore.h; sourceTree = "<group>"; };
+		544D772F1A0B5513006D5E74 /* RPPItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +92,18 @@
 			children = (
 				544D77061A0B4DBB006D5E74 /* AppDelegate.h */,
 				544D77071A0B4DBB006D5E74 /* AppDelegate.m */,
+				544D77281A0B4E99006D5E74 /* RPPItemViewController.h */,
+				544D77291A0B4E99006D5E74 /* RPPItemViewController.m */,
+				544D772B1A0B5434006D5E74 /* BNRItem.h */,
+				544D772C1A0B5434006D5E74 /* BNRItem.m */,
 				544D77091A0B4DBB006D5E74 /* ViewController.h */,
 				544D770A1A0B4DBB006D5E74 /* ViewController.m */,
 				544D770C1A0B4DBB006D5E74 /* Main.storyboard */,
 				544D770F1A0B4DBB006D5E74 /* Images.xcassets */,
 				544D77111A0B4DBB006D5E74 /* LaunchScreen.xib */,
 				544D77021A0B4DBA006D5E74 /* Supporting Files */,
+				544D772E1A0B5513006D5E74 /* RPPItemStore.h */,
+				544D772F1A0B5513006D5E74 /* RPPItemStore.m */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -221,6 +236,9 @@
 			files = (
 				544D770B1A0B4DBB006D5E74 /* ViewController.m in Sources */,
 				544D77081A0B4DBB006D5E74 /* AppDelegate.m in Sources */,
+				544D772D1A0B5434006D5E74 /* BNRItem.m in Sources */,
+				544D77301A0B5513006D5E74 /* RPPItemStore.m in Sources */,
+				544D772A1A0B4E99006D5E74 /* RPPItemViewController.m in Sources */,
 				544D77051A0B4DBB006D5E74 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -66,12 +66,20 @@
 - (NSDate *) dateCreated {
     return _dateCreated;
 }
+//- (NSString *) description {
+//    NSString *description = [[NSString alloc] initWithFormat:@"[name:%@], [serialNumber:%@], %@, [cost:%d]",self.itemName, self.serialNumber,[self dateCreated], [self costInDollars]];
+//                             
+//   return description;
+//                             
+//}
+
 - (NSString *) description {
-    NSString *description = [[NSString alloc] initWithFormat:@"[name:%@], [serialNumber:%@], %@, [cost:%d]",self.itemName, self.serialNumber,[self dateCreated], [self costInDollars]];
-                             
-   return description;
-                             
+    NSString *description = [[NSString alloc] initWithFormat:@"%@ (%@) :(Worth $%d)",self.itemName, self.serialNumber, [self costInDollars]];
+    
+    return description;
+    
 }
+
 
 + (BNRItem *) randomItem {
     

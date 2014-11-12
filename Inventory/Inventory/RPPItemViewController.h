@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+# import <UIKit/UIKit.h>
 
-@interface BNRItemViewController : NSObject
+@interface RPPItemViewController : UITableViewController
 
 @end

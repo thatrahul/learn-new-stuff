@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RPPItemViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    RPPItemViewController *itemViewController = [RPPItemViewController new];
+    
+    
+    self.window.rootViewController = itemViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
     // Override point for customization after application launch.
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
